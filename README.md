@@ -1,2 +1,2 @@
 # huayllapampa
-es una pagina de un pueblo de mi región
+es una pagina web de un pueblo de mi región
