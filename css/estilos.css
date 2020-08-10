@@ -1,0 +1,374 @@
+
+* {
+    box-sizing: border-box;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 1.5px;
+    
+}
+.section__titulo {
+    text-align: center;
+    font-size: 40px;
+    color: #d61062;
+}
+.contenedor {
+    margin: auto;
+}
+/* ******************Estilos De movimiento******************* */
+.contenedors {
+    display: flex;
+    width: 500px;
+    height: 40px;
+    font-size: 80px;
+    line-height: 40px;
+
+    position: absolute;
+    overflow: hidden;
+    
+    top: 20px;
+}
+.title {
+    list-style: none;
+    padding-left: 10px;
+    animation: cambiar 4s infinite;
+    margin: 0;
+}
+@keyframes cambiar {
+    0% {margin-top: 0;}
+    20% {margin-top: 0;}
+
+    25% {margin-top: -40px;}
+    50% {margin-top: -40px;}
+
+    55% {margin-top: -80px;}
+    80% {margin-top: -80px;}
+    
+    85% {margin-top: -40px;}
+    95% {margin-top: -40px;}
+
+    100% {margin-top: 0;}
+}
+/* ******************Estilos Del Titulo******************* */
+.how {
+    color: red;
+    font-family: initial;
+    text-shadow: 0px 0px 13px black;
+}
+.law {
+    color: rgb(15, 15, 15);
+    font-family: initial;
+    text-shadow: 0px 0px 13px black;
+}
+.pow {
+    color: rgb(34, 3, 172);
+    font-family: initial;
+    text-shadow: 0px 0px 13px black;
+}
+/*------------------Estilos del header-------------------*/
+.header {
+    height: 60px;
+}
+.header .contenedor{
+    display: flex;
+    justify-content: space-between;
+}
+.logo, .icon-menu {
+    margin: 5px;
+    color: rgb(252, 7, 7);
+}
+
+.icon-menu{
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    background: #fba919;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 10px;
+    margin-left: auto;
+    cursor: pointer;
+}
+/*---------------------Estilos del menu------------------------------*/
+.nav {
+    position: absolute;
+    top: 100px;
+    left: -100%;
+    width: 100%;
+    transition: all 0.4s;
+
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu__link {
+    display: block;
+    padding: 15px;
+    background: #1b1a1bab;
+    text-decoration: none;
+    color: rgb(0, 231, 31);
+    font-family: initial;
+    font-size: 35px;
+    text-shadow: 0px 0px 13px black;
+}
+.menu__link:hover {
+    background: white;
+    color: #fba919;
+}
+.mostrar {
+    left: 0;
+}
+
+/*-----------------Etilos del banner----------------------------*/
+
+.banner{
+    margin-top: -60px;
+    position: relative;
+    z-index: -1000;
+    margin-bottom: 20px;
+}
+
+.banner .contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.banner__txt {
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    top: 100%;
+    left: 50%; 
+    font-size: 50px;
+    color: green;
+    font-family: 'Gill Sans';
+}
+.banner .img{
+    background-size: 100% 100%;
+    height: 100vh;
+}
+/*------------------Estilos del info-------------------*/
+
+.info__columna {
+    background: #f78706d5;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+.info__titulo {
+    color: darkgreen;
+    text-align: center;
+}
+/*------------------Estilos de Cursos-------------------*/
+
+.cursos__columna {
+    position: relative;
+    margin-bottom: 30px;
+}
+.cursos__description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: rgba(52, 71, 73, 0.438);
+    width: 60%;
+    height: 100%;
+    padding: 5px;
+}
+.cursos__titulo {
+    font-size: 30px;
+    margin: 5px 0;
+    color: rgb(252, 248, 9);
+}
+.cursos__img {
+    width: 100%;
+}
+/*------------------Estilos de Footer-------------------*/
+
+.footer {
+    background: rgba(15, 15, 15, 0.979);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer .social [class^="icon-"] {
+    display: inline-block;
+    color: rgba(187, 90, 90, 0.658);
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+}
+
+/*------------------Estilos Responsive-------------------*/
+
+@media(min-width:480px) {
+    .title {
+        font-size: 40px;
+    }
+    .banner__titulo {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+    .banner__text {
+        display: block;
+        font-size: 20px;
+        margin: 7px 0;
+    }
+    .info, .cursos {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -80px;
+    }
+    .info__columna {
+        width: 31%;
+    }
+    .info__titulo {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+    .section__titulo {
+        width: 100%;
+    }
+    .cursos {
+        flex-wrap: wrap;
+        margin-top: 0;
+       
+    }
+    .cursos__columna {
+        width: 48%;
+    }
+}
+
+@media(min-width:768px) {
+    .banner__titulo {
+        font-size: 20px;
+    }
+    .cursos__titulo {
+        font-size: 30px;
+    }
+    .cursos__txt {
+        font-size: 15px;
+    }
+}
+
+@media(min-width:1024px) {
+    .contenedor {
+        width: 1000px;
+    }
+    .select {
+        color: rgb(4, 237, 253);
+        background: #71f00ace;
+    }
+    .icon-menu {
+        width: 75px;
+        height: 75px;
+    }
+    .banner__titulo {
+        font-size: 20px;
+    }
+    .info {
+        margin-top: -120px;
+    }
+    .info__columna {
+        padding: 30px;
+    }
+    .info__titulo {
+        font-size: 60px;
+        text-align: center;
+    }
+    .cursos__description {
+        padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .cursos__titulo {
+        font-size: 30px;
+        margin: 0;
+    }
+    .cursos__txt {
+        font-size: 15px;
+    }
+}
+@media(min-width:1280px) {
+    .contenedor {
+        width: 1200px;
+    }
+    .nav {
+        position: static;
+        width: auto;
+    }
+    .menu {
+        display: flex;
+        margin: 150px;
+    }
+    .menu__link {
+        font-size: 30px;
+    }
+    .icon-menu {
+        display: none;
+    }
+    .title {
+        font-size: 60px;
+    }
+    .banner .contenedor {
+        top: 40%;
+    }
+
+    .info {
+        margin-top: -220px;
+    }
+    .section__titulo {
+        font-size: 60px;
+        background: rgb(50, 175, 169);
+    }
+    .cursos__titulo {
+        font-size: 50px;
+    }
+} 
+
+.logo {
+    text-shadow: 0px 0px 7px black;
+}
+.banner__txt {
+    text-shadow: 0px 0px 13px rgb(252, 175, 8);
+}
+/*------------------Estilos red social-------------------*/
+.finish {
+    font-size: 20px;
+    text-shadow: 0px 0px 7px rgb(250, 6, 6);
+}
+.copy {
+    color: rgb(8, 93, 250);
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 0px 0px 7px rgb(161, 247, 3);
+}
+
+
+
+
+
+
+
